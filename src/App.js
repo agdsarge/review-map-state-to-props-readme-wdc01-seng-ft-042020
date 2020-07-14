@@ -9,6 +9,7 @@ class App extends Component {
     this.props.store.dispatch({
       type: 'GET_COUNT_OF_ITEMS',
     });
+    // console.log(this.props)
   }
 
   handleOnClickUsers() {
@@ -37,5 +38,12 @@ const mapStateToProps = (state) => {
   debugger;
   return { items: state.items }
 }
+
+// const vanilla = (milkshake) => {
+//   debugger;
+//   return { items: milkshake.items }
+// }
+
+// export default connect(vanilla)(App);
 
 export default connect(mapStateToProps)(App);
